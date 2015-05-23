@@ -7,12 +7,12 @@ from string import Template
 word_path = 'word_list2.txt'
 output_path = 'poster/words.tex'
 
-word_template = Template(r"$word\hspace{2mm}")
+word_template = Template(r"\naviword{$word}")
 
 def main():
 
 	def sub(s):
-		return word_template.substitute(word=s.replace(navi_alphabet.tiftang1, "`").replace(navi_alphabet.tiftang2, "'").strip())
+		return word_template.substitute(word=s.replace(navi_alphabet.tiftang1, "'").replace(navi_alphabet.tiftang2, "'").strip())
 
 	outfile = open(output_path, 'w', encoding="utf-8")
 
