@@ -8,12 +8,15 @@
 
 \usepackage{tikz}
 
+\newcommand{\wordtype}[1]{#1}
+\newcommand{\wordgroup}[1]{#1}
+
 \newcommand{\naviword}[1]{
 \begin{tikzpicture}[baseline]
- \node[fill=blue!20, minimum size=.8cm, rounded corners=.4cm, anchor=base] at (0, 0) {\vphantom{lp}\large #1};
+ \node[fill=blue!20, minimum size=.8cm, rounded corners=.4cm, anchor=base] at (0, 0) 
+ {\vphantom{lp}\large #1};
 \end{tikzpicture}
 }
-
 \begin{document}
 \centering
 \pagenumbering{gobble}
